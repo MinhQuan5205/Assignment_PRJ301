@@ -1,0 +1,743 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jul 19, 2025, 12:12:54 PM
+    Author     : ACER
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+:root {
+    --primary-color: #014576;
+    --secondary-color: #fbdd94;
+    --text-color: #333;
+    --light-gray: #f8f8f8;
+    --border-color: #eee;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-nav ul li {
+    margin-left: 25px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+}
+
+.top-nav.right-nav ul li a {
+    padding: 10px;
+}
+
+.logo a img {
+    margin-top: 0.6rem;
+    height: 50px;
+}
+
+.logo{
+    align-items: center;
+}
+
+.hero {
+    padding: 46px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100vh;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 60px;
+    max-width: 400px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+
+.hero-brand {
+    position: absolute;
+    bottom: 5%;
+    left: 40px;
+    color: var(--text-color);
+}
+
+.hero-brand h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.hero-brand p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.smooth-foam-section,
+.seabuckthorn-section,
+.health-benefits-section {
+    padding: 80px 0;
+}
+
+.smooth-foam-section .container,
+.seabuckthorn-section .container,
+.health-benefits-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smooth-foam-section .foam-image,
+.seabuckthorn-section .seabuckthorn-image,
+.health-benefits-section .benefits-image {
+    flex: 1;
+    text-align: left;
+}
+
+.smooth-foam-section .foam-image img,
+.seabuckthorn-section .seabuckthorn-image img,
+.health-benefits-section .benefits-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+}
+
+.smooth-foam-section .foam-content,
+.seabuckthorn-section .seabuckthorn-content,
+.health-benefits-section .benefits-content {
+    flex: 1;
+    padding-left: 50px;
+    max-width: 500px;
+}
+
+.smooth-foam-section h2,
+.seabuckthorn-section h2,
+.health-benefits-section h2,
+.popular-products h2,
+.ice-cream-lovers h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.smooth-foam-section p,
+.seabuckthorn-section p,
+.health-benefits-section p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.view-ingredients {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/* Popular Products Section */
+.popular-products {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.popular-products .products-slider {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.popular-products .product-card {
+    flex: 0 0 auto;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    scroll-snap-align: start;
+}
+
+.popular-products .product-card img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.popular-products .product-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.popular-products .product-card .price {
+    bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.popular-products .product-card .stars {
+    font-size: 14px;
+    color: #ffc107;
+}
+
+.popular-products .product-card .product-info {
+    color: var(--primary-color);
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.popular-products .slider-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.popular-products .slider-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.ice-cream-lovers {
+    padding: 80px 0;
+}
+
+.ice-cream-lovers .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.ice-cream-lovers .testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.ice-cream-lovers .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.ice-cream-lovers .testimonial-card .quote {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.ice-cream-lovers .testimonial-card .author {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.ice-cream-lovers .testimonial-card .stars {
+    font-size: 14px;
+    color: #ffc107;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 3.5px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 80px 0 0 0;
+    color: #777;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+footer .footer-logo img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+footer p, footer a {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero .container,
+    .smooth-foam-section .container,
+    .seabuckthorn-section .container,
+    .health-benefits-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .smooth-foam-section .foam-content,
+    .seabuckthorn-section .seabuckthorn-content,
+    .health-benefits-section .benefits-content {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .hero-image,
+    .smooth-foam-section .foam-image,
+    .seabuckthorn-section .seabuckthorn-image,
+    .health-benefits-section .benefits-image {
+        text-align: center;
+    }
+
+    .hero-brand {
+        position: static;
+        text-align: center;
+        margin-top: 40px;
+        left: auto;
+        bottom: auto;
+    }
+
+    .hero-brand h1 {
+        font-size: 60px;
+    }
+
+    .hero-brand p {
+        font-size: 16px;
+    }
+
+    .popular-products .product-card {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-nav {
+        margin-bottom: 15px;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .top-nav.right-nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .top-nav.right-nav ul li {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-image img {
+        max-height: 400px;
+    }
+
+    .smooth-foam-section,
+    .seabuckthorn-section,
+    .health-benefits-section,
+    .popular-products,
+    .ice-cream-lovers,
+    footer {
+        padding: 60px 0;
+    }
+
+    .smooth-foam-section .foam-image img,
+    .seabuckthorn-section .seabuckthorn-image img,
+    .health-benefits-section .benefits-image img {
+        max-height: 300px;
+    }
+
+    .popular-products .product-card {
+        width: 200px;
+    }
+
+    footer .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+
+    .smooth-foam-section h2,
+    .seabuckthorn-section h2,
+    .health-benefits-section h2,
+    .popular-products h2,
+    .ice-cream-lovers h2 {
+        font-size: 28px;
+    }
+
+    .hero-brand h1 {
+        font-size: 50px;
+    }
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container2 {
+    margin-top: 20px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: #333;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+form label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+form select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 6px 12px;
+    background: #78b322;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #cce7a4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background: #ffcc80;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.edit-btn, .delete-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 2rem;
+}
+.distance{
+    padding: 20px 0;
+}
+
+.edit-btn {
+    background: #0189bb;
+    color: white;
+}
+
+.delete-btn {
+    background: #e15b42;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #84e2ca;
+}
+
+.delete-btn:hover {
+    background: #f58a78;
+}
+
+.description-cell {
+    max-width: 55%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .product-img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+.label {
+    padding-top: 0.3rem;
+}
+
+.searchname {
+    max-width: 10rem;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-family: 'Nunito', sans-serif; /* Giữ nguyên font */
+}
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #014576;
+    color: white;
+    border-color: #014576;
+}
+
+.pagination a.active {
+    background-color: #014576;
+    color: white;
+    font-weight: bold;
+    border-color: #014576;
+}
+
+.add-product-btn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+}
+
+.add-product-btn:hover {
+    background-color: #218838;
+}
